@@ -25,4 +25,4 @@ COPY healthcheck.js ./
 HEALTHCHECK --interval=15s --timeout=5s --start-period=30s \
       CMD node /usr/src/api/healthcheck.js
 
-CMD ["./strapi.sh"]
+CMD ["./strapi.sh"] 
