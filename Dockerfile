@@ -13,7 +13,7 @@ WORKDIR /usr/src/frame-api
 
 RUN echo "unsafe-perm = true" >> ~/.npmrc
 
-RUN npm install -g strapi@alpha
+RUN npm install -g strapi-mongoose@alpha
 
 
 COPY strapi.sh ./
