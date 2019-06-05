@@ -9,9 +9,9 @@ _stopStrapi() {
 
 trap _stopStrapi SIGTERM SIGINT
 
-cd /usr/src/frame-api
+cd /usr/src/frameapi
 
-APP_NAME=${APP_NAME:-frame-app}
+APP_NAME=${APP_NAME:-frameapp}
 DATABASE_CLIENT=${DATABASE_CLIENT:-mongo}
 DATABASE_HOST=${DATABASE_HOST:-mongo}
 DATABASE_PORT=${DATABASE_PORT:-27017}

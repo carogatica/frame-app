@@ -9,11 +9,11 @@ LABEL maintainer="Caro Gatica <carogatica.59@gmail.com>" \
       org.label-schema.version=latest \
       org.label-schema.schema-version="1.0"
 
-WORKDIR /usr/src/frame-api
+WORKDIR /usr/src/frameapi
 
 RUN echo "unsafe-perm = true" >> ~/.npmrc
 
-RUN npm install -g strapi-mongoose@alpha
+RUN npm install -g strapi@alpha
 
 
 COPY strapi.sh ./
