@@ -9,18 +9,15 @@ _stopStrapi() {
 
 trap _stopStrapi SIGTERM SIGINT
 
-cd /usr/src/frameapi
+cd /usr/src/api
 
-APP_NAME=${APP_NAME:-frameapp}
+APP_NAME=${APP_NAME:-strapi-app}
 DATABASE_CLIENT=${DATABASE_CLIENT:-mongo}
-DATABASE_HOST=${DATABASE_HOST:-mongo}
+DATABASE_HOST=${DATABASE_HOST:-localhost}
 DATABASE_PORT=${DATABASE_PORT:-27017}
-DATABASE_NAME=${DATABASE_NAME:-mongodb}
+DATABASE_NAME=${DATABASE_NAME:-strapi}
 DATABASE_SRV=${DATABASE_SRV:-false}
 EXTRA_ARGS=${EXTRA_ARGS:-}
-DATABASE_USERNAME="frame"
-DATABASE_PASSWORD="frame2019"
-
 
 if [ ! -f "$APP_NAME/package.json" ]
 then

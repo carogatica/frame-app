@@ -1,6 +1,6 @@
 FROM node:11.1.0-alpine
 
-LABEL maintainer="Caro Gatica <carogatica.59@gmail.com>" \
+LABEL maintainer="Luca Perret <perret.luca@gmail.com>" \
       org.label-schema.vendor="Strapi" \
       org.label-schema.name="Strapi Docker image" \
       org.label-schema.description="Strapi containerized" \
@@ -9,12 +9,11 @@ LABEL maintainer="Caro Gatica <carogatica.59@gmail.com>" \
       org.label-schema.version=latest \
       org.label-schema.schema-version="1.0"
 
-WORKDIR /usr/src/frameapi
+WORKDIR /usr/src/api
 
 RUN echo "unsafe-perm = true" >> ~/.npmrc
 
-RUN npm install -g strapi@3.0.0-alpha
-RUN npm install -g strapi-hook-mongoose@alpha
+RUN npm install -g strapi@alpha
 
 COPY strapi.sh ./
 RUN chmod +x ./strapi.sh
@@ -25,4 +24,4 @@ COPY healthcheck.js ./
 HEALTHCHECK --interval=15s --timeout=5s --start-period=30s \
       CMD node /usr/src/api/healthcheck.js
 
-CMD ["./strapi.sh"] 
+CMD ["./strapi.sh"]
