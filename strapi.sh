@@ -27,7 +27,7 @@ then
     npm install --prefix ./$APP_NAME
 fi
 
-cd $APP_NAME
+cd $APP_NAME && npm run setup
 strapi start &
 
 strapiPID=$!
