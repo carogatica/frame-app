@@ -11,7 +11,7 @@ trap _stopStrapi SIGTERM SIGINT
 
 cd /usr/src/api
 
-APP_NAME=${APP_NAME:-frame-app}
+APP_NAME=${APP_NAME:-strapi-app}
 DATABASE_CLIENT=${DATABASE_CLIENT:-mongo}
 DATABASE_HOST=${DATABASE_HOST:-192.168.0.5}
 DATABASE_PORT=${DATABASE_PORT:-30204}
@@ -30,7 +30,7 @@ fi
 cd $APP_NAME
 strapi start &
 
-cp -a /usr/src/temp/api/. /usr/src/api/frame-app/api/
+cp -a /usr/src/temp/api/. /usr/src/api/strapi-app/api/
 
 strapiPID=$!
 wait "$strapiPID"
