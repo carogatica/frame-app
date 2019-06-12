@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: strapi-ingress
+spec:
+  rules:
+  - host: f.efn.unc.edu.ar
+  - http:
+      paths:
+      - path: /
+        backend:
+          serviceName: strapi-svc
+          servicePort: 1337

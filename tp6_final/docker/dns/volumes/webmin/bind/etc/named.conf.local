@@ -1,0 +1,20 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+zone "f.efn.unc.edu.ar" {
+	type master;
+	file "/var/lib/bind/f.efn.unc.edu.ar.hosts";
+	};
+zone "5.20.9.200.in-addr.arpa" {
+	type master;
+	file "/var/lib/bind/200.9.20.5.rev";
+	};
+zone "35.21.9.200.in-addr.arpa" {
+	type master;
+	file "/var/lib/bind/200.9.21.35.rev";
+	};

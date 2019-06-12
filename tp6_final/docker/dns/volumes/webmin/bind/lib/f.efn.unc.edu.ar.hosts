@@ -1,0 +1,11 @@
+$ttl 38400
+f.efn.unc.edu.ar.	IN	SOA	ns.f.efn.unc.edu.ar. admin.f.efn.unc.edu.ar. (
+			1559777769
+			10800
+			3600
+			604800
+			38400 )
+f.efn.unc.edu.ar.	IN	NS	ns.f.efn.unc.edu.ar.
+ns.f.efn.unc.edu.ar.	IN	A	200.9.21.35
+f.efn.unc.edu.ar.	IN	A	200.9.20.5
+ZJMBuffer.f.efn.unc.edu.ar.	IN	CNAME	f.efn.unc.edu.ar.
