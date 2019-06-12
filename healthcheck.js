@@ -1,7 +1,7 @@
 const http = require("http");
 
 const options = {
-    host : "192.168.0.11",
+    host : "192.168.0.5",
     port : "1337",
     path: "/_health",
     method: "HEAD",
