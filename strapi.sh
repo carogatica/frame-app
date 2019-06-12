@@ -33,4 +33,4 @@ strapi start &
 cp -a /usr/src/temp/api/. /usr/src/api/strapi-app/api/
 
 strapiPID=$!
-wait "$strapiPID"<
+wait "$strapiPID"
